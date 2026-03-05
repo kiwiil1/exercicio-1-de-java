@@ -1,0 +1,190 @@
+desafio 1 
+  import java.util.Scanner;
+import java.time.LocalDate;
+
+public class exer1 {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("Dia de nascimento: ");
+        int dia = Integer.parseInt(ler.nextLine());
+
+        System.out.print("Mês de nascimento: ");
+        int mes = Integer.parseInt(ler.nextLine());
+
+        System.out.print("Ano de nascimento: ");
+        int ano = Integer.parseInt(ler.nextLine());
+
+        LocalDate data = LocalDate.of(ano, mes, dia);
+        System.out.print("Sua data de nascimento é: " + data);
+
+        ler.close();
+    }
+}
+
+desafio 2
+  import java.util.Scanner;
+
+public class exer2 {
+    public static void main(String[] args){
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("QUal a sua idade? Digite-a: ");
+        int idade = ler.nextInt();
+
+            if (idade < 18) {
+                System.out.print("Você é menor de idade");
+            }else if (idade >= 18){
+                System.out.print("Você é maior de idade");
+            }
+            ler.close();
+    }
+}
+
+desafio 3
+  import java.util.Scanner;
+
+public class exer3 {
+    public static void main(String[] args){
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("Digite um número de 1 a 12: ");
+        int num = Integer.parseInt(ler.nextLine());
+        String nomeMes;
+
+        switch (num) {
+            case 1:
+                nomeMes = "Janeiro";
+                break;
+            case 2:
+                nomeMes = "Fevereiro";
+                break;
+            case 3:
+                nomeMes = "Maio";
+                break;
+            case 4:
+                nomeMes = "Abril";
+                break;
+            case 5:
+                nomeMes = "Março";
+                break;
+            case 6:
+                nomeMes = "Junho";
+                break;
+            case 7:
+                nomeMes = "Julho";
+                break;
+            case 8:
+                nomeMes = "Agosto";
+                break;
+            case 9:
+                nomeMes = "Setembro";
+                break;
+            case 10:
+                nomeMes = "Outubro";
+                break;
+            case 11:
+                nomeMes = "Novembro";
+                break;
+            case 12:
+                nomeMes = "Dezembro";
+                break;
+
+            default:
+                nomeMes = "Mês inválido";
+                break;
+        }
+        System.out.println("O mês é: " + nomeMes);
+
+        ler.close();
+    }
+}
+
+desafio 4
+  import java.util.Scanner;
+
+public class exerc4 {
+    public static void main(String[] args){
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("Digite a temperatura em Celsius: ");
+        int temp = Integer.parseInt(ler.nextLine());
+
+        System.out.print("Escolha a conversão: 1 - Fahrenheit 2 - Kelvin ");
+        int escolha = Integer.parseInt(ler.nextLine());
+
+          if (escolha == 1){
+              System.out.print("A temperatura em Fahrenheit é: " + (temp * 9/5 + 32 ));
+        }else if (escolha == 2){
+              System.out.print("A temperatura em Kelvin é: " + (temp +273));
+          }
+            ler.close();
+    }
+}
+
+desafio 5
+  import java.util.Scanner;
+
+public class exerc5 {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        System.out.print("Digite o saldo atual: ");
+        int saldo = Integer.parseInt(ler.nextLine());
+
+        System.out.print(" 1 - Ver saldo    2 - Sacar dinheiro    3 - Depositar dinheiro    4 - Sair ");
+        int menu = Integer.parseInt(ler.nextLine());
+
+        String opcaoMenu;
+
+        switch(menu) {
+            case 1:
+                System.out.print("Seu saldo é: " + saldo);
+                break;
+            case 2:
+                System.out.print("Qual o valor que deseja sacar? ");
+                int valors = Integer.parseInt(ler.nextLine());
+
+                saldo = saldo - valors;
+                System.out.print("Saque realizado. Novo Saldo: " + saldo);
+                break;
+            case 3:
+                System.out.print("Qual o valor que deseja depositar? ");
+                int valord = Integer.parseInt(ler.nextLine());
+
+                saldo = saldo + valord;
+                System.out.print("Deposito realizado. Novo saldo: " + saldo);
+                break;
+            case 4:
+                System.out.print("" + menu);
+        }
+    }
+}
+
+desafio 6
+  import java.util.Scanner;
+
+public class exerc6 {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        System.out.println("Digite seu peso: ");
+        double peso = Double.parseDouble(ler.nextLine());
+
+        System.out.print("Digite sua altura: ");
+        double alt = Double.parseDouble(ler.nextLine());
+        double imc = peso / (alt *alt);
+
+        System.out.print("Seu imc é: " + imc);
+        if (imc < 18.5){
+            System.out.print("Classificação: Abaixo do peso. ");
+        }else if(imc = 18.5 - 24.9){
+            System.out.print("Classificação: Peso ideal. ");
+        }else if (imc = 25.0 - 29.9){
+            System.out.print("Classificação: Sobrepeso. ");
+        }else if(imc >= 30.0){
+            System.out.print("Obesidade")
+        }
+        ler.close();
+    }
+}
