@@ -1,2 +1,2 @@
-# exercicio-1-de-java
-aula 1
+# exercício de Java
+exercícios básicos para me introduzir na língua Java!
